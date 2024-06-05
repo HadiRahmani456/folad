@@ -1,0 +1,55 @@
+{% extends 'post/base.html' %}
+{% block content %}
+      <div class="latest-posts">
+         <div class="container-fluid">
+            <div class="blog-title-span">
+               <span class="title">اخبار و مقالات</span>
+            </div>
+             {% for post in posts %}
+            <div class="col-md-3">
+               <div class="post-box">
+                     <figure>
+                        <img src="{{ post.photo.url }}" alt="">
+                        <figcaption class="meta-fig">
+                           <span><i class="fa fa-clock-o"></i>{{ post.publish }}</span>&nbsp;
+                        </figcaption>
+                        <figcaption class="view">
+                           <span>{{ post.category }}</span>
+                        </figcaption>
+                     </figure>
+                     <div class="text-p">
+                        <h5>{{ post.title }}</h5>
+                        <p>{{ post.body }}</p>
+                        <div class="text-rigt">
+                  <a href="{{ post.get_absolute_url }}">ادامه ...</a></div>
+                  </div>
+               </div>
+            </div>
+             {% endfor %}
+            <div class="col-md-12 text-center">
+               <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                     {% if page_obj.has_previous %}
+                     <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
+                     {% endif %}
+
+
+                  {% for i in page_obj.pagintor.page_range %}
+                      {% if i == page_obj.number %}
+                     <li class="page-item"><a class="page-link" href="#">{{ i }}</a></li>
+                      {% else %}
+                        {{ i }}
+                      {% endif %}
+                  {% endfor %}
+
+                  
+                     {% if page_obj.has_next %}
+                     <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">بعدی</a></li>
+                     {% endif %}
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <div class="bg"></div>
+{% endblock %}

@@ -1,0 +1,369 @@
+{% extends "post/base.html" %}
+{% load static %}
+{% block content %}
+
+      <div class="clear-fix"></div>
+      <div class="container-fluid">
+         <div class="row">
+{#            <div class="col-md-3">#}
+{#               <div class="top-sidebar-r">#}
+{#                  <span class="title">عکس</span>#}
+{#                  <a href="#">#}
+{#                     <div class="bx">#}
+{#                        <div class="col-md-6">#}
+{#                           <div class="img-box">#}
+{#                              <figure>#}
+{#                                 <img src="../../static/img/696112501123546.jpg" alt="">#}
+{#                                 <figcaption></figcaption>#}
+{#                              </figure>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6">#}
+{#                           <div class="meta">#}
+{#                              <h5>#}
+{#                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان#}
+{#                              گرافیک است. چاپگرها و...</h5>#}
+{#                              <span><i class="fa fa-clock-o"></i> 99/3/20</span>#}
+{#                              <div class="text-left">#}
+{#                                 <sub><i class="fa fa-comment"></i> 26</sub>#}
+{#                              </div>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#                  <a href="#">#}
+{#                     <div class="bx">#}
+{#                        <div class="col-md-6">#}
+{#                           <div class="img-box">#}
+{#                              <figure>#}
+{#                                 <img src="../../static/img/1733753707Capture.png" alt="">#}
+{#                                 <figcaption></figcaption>#}
+{#                              </figure>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6 ">#}
+{#                           <div class="meta">#}
+{#                              <h5>#}
+{#                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان#}
+{#                              گرافیک است. چاپگرها و... متن ارسال شده</h5>#}
+{#                              <span><i class="fa fa-clock-o"></i> 99/3/20</span>#}
+{#                              <div class="text-left">#}
+{#                                 <sub><i class="fa fa-comment"></i> 26</sub>#}
+{#                              </div>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#                  <a href="#">#}
+{#                     <div class="bx">#}
+{#                        <div class="col-md-6">#}
+{#                           <div class="img-box">#}
+{#                              <figure>#}
+{#                                 <img src="../../static/img/290667058azer news.jpg" alt="">#}
+{#                                 <figcaption></figcaption>#}
+{#                              </figure>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6 ">#}
+{#                           <div class="meta">#}
+{#                              <h5>#}
+{#                              عنوان برایلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده#}
+{#                              از طراحان گرافیک است. چاپگرها و... شده</h5>#}
+{#                              <span><i class="fa fa-clock-o"></i> 99/3/20</span>#}
+{#                              <div class="text-left">#}
+{#                                 <sub><i class="fa fa-comment"></i> 26</sub>#}
+{#                              </div>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#                  <a href="#">#}
+{#                     <div class="bx">#}
+{#                        <div class="col-md-6">#}
+{#                           <div class="img-box">#}
+{#                              <figure>#}
+{#                                 <img src="../../static/img/parsitarh-1038x515.png" alt="">#}
+{#                                 <figcaption></figcaption>#}
+{#                              </figure>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6 ">#}
+{#                           <div class="meta">#}
+{#                              <h5>#}
+{#                              عنوان برای متن ارسال شده</h5>#}
+{#                              <span><i class="fa fa-clock-o"></i> 99/3/20</span>#}
+{#                              <div class="text-left">#}
+{#                                 <sub><i class="fa fa-comment"></i> 246</sub>#}
+{#                              </div>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#               </div>#}
+{#            </div>#}
+             {# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}
+            <div class="col-md-12">
+               <div class="main-slider-box">
+                  <div class="owl-carousel owl-theme main-slider">
+                      {% for slid in slids %}
+                     <div class="item">
+                        <figure>
+                           <a href="{{ slid.get_absolute_url }}"><img src="{{ slid.photo.url }}" alt=""></a>
+                           <figcaption class="gradient-fig"></figcaption>
+                           <figcaption class="desc-fig">
+                              <h2 style="color: orange">{{ slid.title }}</h2>
+                              <p>{{ slid.body}} </p>
+                           </figcaption>
+                        </figure>
+                     </div>
+                      {% endfor %}
+                  </div>
+               </div>
+            </div>
+             {# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}{# slidbars #}
+{#            <div class="col-md-3">#}
+{#               <div class="ads-box">#}
+{#                  <span class="title">تبلیغات</span><br>#}
+{#                  <figure>#}
+{#                     <img src="../../static/img/unnamed.jpg" alt="">#}
+{#                  </figure>#}
+{#                  <figure>#}
+{#                     <img src="../../static/img/696112501123546.jpg" alt="">#}
+{#                  </figure>#}
+{#               </div>#}
+{#            </div>#}
+         </div>
+      </div>
+      <div class="clear-fix"></div>
+      <div class="main-content">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-3">
+      {# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}
+                  <div class="r-sidebar">
+                     <div class="ads-box">
+                        <span class="title">تبلیغات</span><br>
+                        <figure>
+                           <img class="alignnone size-full wp-image-6469 lazyloaded" src="https://banner-design.ir/wp-content/uploads/bigtheme1.gif" alt="" width="300" height="250" data-ll-status="loaded">
+                        </figure>
+                        <figure>
+                           <img class="alignnone size-full wp-image-5903 lazyloaded" src="https://banner-design.ir/wp-content/uploads/ersal-sms300x250.gif" alt="" width="300" height="250" data-ll-status="loaded">
+                        </figure>
+                     </div>
+                     <div class="ads-box">
+                        <span class="title">تبلیغات</span><br>
+                        <figure>
+                            <img class="alignnone size-full wp-image-5889 lazyloaded" src="https://banner-design.ir/wp-content/uploads/Brave120x240.gif" alt="" width="120" height="240" data-ll-status="loaded">                        </figure>
+                     </div>
+                  </div>
+      {# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}
+               </div>
+               <div class="col-md-6">
+                  <div class="content-wrapper">
+                     <div class="most-views">
+                        <span class="title">مطالب پربازدید</span>
+                        <div class="col-md-8">
+                           <div class="main-post">
+                              <a href="#">
+                                 <figure>
+                                    <img src="../../static/img/290667058azer news.jpg" alt="">
+                                    <figcaption>
+                                       <span><i class="fa fa-folder-o"></i> خبر روز</span>
+                                       <h3>ایپسوم متن ساختگی با تولید سادگی نامفهوم تولید سادگی از صنعت</h3>
+                                       <span><i class="fa fa-comments-o"></i> 65</span>
+                                    </figcaption>
+                                 </figure>
+                                 <div class="p-div">
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                       طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                       سطرآنچنان که
+                                       لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و...
+                                    </p>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="oth-posts">
+                              <div class="r-box">
+                                 <a href="#">
+                                    <h5>که لازم است و برای شرایط فعلی تکنولوژی مور</h5>
+                                 </a>
+                                 <span><i class="fa fa-clock-o"></i> 3 دی 98</span>
+                              </div>
+                              <div class="r-box">
+                                 <a href="#">
+                                    <h5>که لازم است و برای شرایط فعلی تکنولوژی مور</h5>
+                                 </a>
+                                 <span><i class="fa fa-clock-o"></i> 3 دی 98</span>
+                              </div>
+                              <div class="r-box">
+                                 <a href="#">
+                                    <h5>که لازم است و برای شرایط فعلی تکنولوژی مور</h5>
+                                 </a>
+                                 <span><i class="fa fa-clock-o"></i> 3 دی 98</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                      <div class="special-cat-box">
+                        <span class="title">فیلم و ویدئو</span>
+                        <div class="col-md-6">
+                           <div class="main-post">
+                              <a href="#">
+                                 <figure>
+                                    <img src="../../static/img/290667058azer news.jpg" alt="">
+                                    <figcaption>
+                                       <span><i class="fa fa-folder-o"></i> خبر روز</span>
+                                       <h3>ایپسوم متن ساختگی با تولید سادگی نامفهوم تولید سادگی از صنعت</h3>
+                                       <span><i class="fa fa-comments-o"></i> 65</span>
+                                    </figcaption>
+                                 </figure>
+                              </a>
+                           </div>
+                           <div class="main-post">
+                              <a href="#">
+                                 <figure>
+                                    <img src="../../static/img/696112501123546.jpg" alt="">
+                                    <figcaption>
+                                       <span><i class="fa fa-folder-o"></i> خبر روز</span>
+                                       <h3>ایپسوم متن ساختگی با تولید سادگی نامفهوم تولید سادگی از صنعت</h3>
+                                       <span><i class="fa fa-comments-o"></i> 65</span>
+                                    </figcaption>
+                                 </figure>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="left-content">
+                              <div class="col-md-6">
+                                 <a href="#">
+                                    <div class="content">
+                                       <figure>
+                                          <img src="../../static/img/696112501123546.jpg" alt="">
+                                          <figcaption><i class="fa fa-external-link"></i></figcaption>
+                                       </figure>
+                                       <h5> متن ساختگی با تولید سادگی نامفهوم تولید سادگی از صنعت</h5>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="col-md-6">
+                                 <a href="#">
+                                    <div class="content">
+                                       <figure>
+                                          <img src="../../static/img/parsitarh-1038x515.png" alt="">
+                                          <figcaption><i class="fa fa-external-link"></i></figcaption>
+                                       </figure>
+                                       <h5> متن ساختگی با تولید سادگی نامفهوم تولید سادگی از صنعت</h5>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="col-md-6">
+                                 <a href="#">
+                                    <div class="content">
+                                       <figure>
+                                          <img src="../../static/img/karkhaneh_iran_3.jpg" alt="">
+                                          <figcaption><i class="fa fa-external-link"></i></figcaption>
+                                       </figure>
+                                       <h5> متن ساختگی با تولید سادگی نامفهوم تولید سادگی از صنعت</h5>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="col-md-6">
+                                 <a href="#">
+                                    <div class="content">
+                                       <figure>
+                                          <img src="../../static/img/1397022612335447514155694.jpg" alt="">
+                                          <figcaption><i class="fa fa-external-link"></i></figcaption>
+                                       </figure>
+                                       <h5> متن ساختگی با تولید سادگی نامفهوم تولید سادگی از صنعت</h5>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="special-cat-box col-md-12" >
+                        <span class="title">فیلم و ویدئو</span>
+                         {% for video in videos %}
+                        <div class="col-md-6">
+                           <div class="main-post">
+                              <a href="{{ video.get_absolute_url }}">
+                                 <figure>
+                                    <img src="{{ video.photo.url }}" alt="">
+                                    <figcaption>
+                                       <span><i class="fa fa-folder-o"></i> {{ video.title }}</span>
+                                       <h3>{{ video.body}}</h3>
+                                       <span><i class="fa fa-comments-o"></i> 65</span>
+                                    </figcaption>
+                                 </figure>
+                              </a>
+                           </div>
+                        </div>
+                         {% endfor %}
+                        <div class="col-md-6">
+                           <div class="left-content">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+      {# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}
+                  <div class="l-sidebar">
+                     <div class="ads-box">
+                        <span class="title">تبلیغات</span><br>
+                        <figure>
+                           <img class="alignnone size-full wp-image-6469 lazyloaded" src="https://banner-design.ir/wp-content/uploads/bigtheme1.gif" alt="" width="300" height="250" data-ll-status="loaded">
+                        </figure>
+                        <figure>
+                           <img class="alignnone size-full wp-image-5903 lazyloaded" src="https://banner-design.ir/wp-content/uploads/ersal-sms300x250.gif" alt="" width="300" height="250" data-ll-status="loaded">
+                        </figure>
+                     </div>
+                  </div>
+      {# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}
+                  <div class="l-sidebar">
+                     <div class="ads-box">
+                        <span class="title">تبلیغات</span><br>
+                        <figure>
+                           <img class="alignnone size-full wp-image-6471 lazyloaded" src="https://banner-design.ir/wp-content/uploads/copysignal.gif" alt="طراحی بنر تبلیغاتی" width="120" height="240" data-ll-status="loaded">                        </figure>
+                        </figure>
+                     </div>
+                  </div>
+      {# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}{# tablighat #}
+               </div>
+            </div>
+         </div>
+
+         <div class="clear-fix"></div>
+         <div class="latest-posts">
+            <div class="container-fluid">
+               <div class="blog-title-span">
+                  <span class="title">آخرین مطالب</span>
+               </div>
+                {% for post in posts %}
+               <div class="col-md-3">
+                  <div class="post-box">
+                     <a href="{{ post.get_absolute_url }}">
+                        <figure>
+                           <img src="{{ post.photo.url }}" alt="">
+                           <figcaption class="meta-fig">
+                              <span><i class="fa fa-clock-o"></i>{{ post.publish }}</span>&nbsp;
+                           </figcaption>
+                            <figcaption class="view"></figcaption>
+                        </figure>
+                        <div class="text-p">
+                           <h5>{{ post.title }}</h5>
+                           <p>{{ post.body }}</p>
+                           <div class="text-rigt">
+                     <a href="{{ post.get_absolute_url }}">ادامه ...</a></div>
+                     </div>
+                     </a>
+                  </div>
+               </div>
+                {% endfor %}
+            </div>
+         </div>
+      </div>
+      <div class="clear-fix"></div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="stylesheet" href={% static 'css/bootstrap.css' %}>
+      <link rel="stylesheet" href={% static 'css/font-awesome.min.css' %}>
+      <link rel="stylesheet" href={% static 'css/owl.carousel.css' %}>
+      <link rel="stylesheet" href={% static 'css/owl.theme.default.css' %}>
+      <link rel="stylesheet" href={% static 'css/style.css' %}>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+            ul.menu li { display: inline-block }
+            ul.menu li a { display:inline-block }
+            ul.sub-menu { display: none; }
+            ul.menu li:hover ul.sub-menu { display: block;background: #a2a2a2; }
+            ul.sub-menu li { display: block; border-bottom: 1px solid #fff; }
+            ul.sub-menu { display: none; width: 160px; position: absolute;top:42px;background: #a2a2a2;}
+            ul.sub-menu li { display: block; border-bottom: 1px solid #fff; }
+            ul.sub-menu li a { display: block;}
+            ul.menu li:hover ul.sub-menu { display: block;background: #a2a2a2;}
+            ul.menu li { display: inline-block;list-style: none;transition: all 0.4s; position: relative; }
+      </style>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+{% include "post/top-bar.html" %}
+{% include "post/header.html" %}
+{% block content %}
+{% endblock %}
+{% include "post/footer.html" %}
+      <script src={% static 'js/jquery.js'%}></script>
+      <script src={% static 'js/bootstrap.js' %}></script>
+      <script src={% static 'js/owl.carousel.min.js' %}></script>
+      <script src={% static 'js/index.js' %}></script>
+</body>
+</html>
